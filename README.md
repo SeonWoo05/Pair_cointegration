@@ -93,4 +93,9 @@ python pair_cointegration_upbit.py --verify --outdir ./results
 python pair_cointegration_upbit.py --run --outdir ./results --sleep-sec 0.2
 # 실데이터(바이낸스)
 python pair_cointegration_binance.py --run --outdir ./results
+
+# 보고서 작성
+python upbit_cointegration_report_builder.py \
+  --results_csv ./results/pair_cointegration_results_<timestamp>.csv \ 
+  --outdir ./report --alpha 0.05 --fdr_q 0.05
 ```
